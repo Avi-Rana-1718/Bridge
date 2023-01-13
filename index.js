@@ -2,15 +2,19 @@ const dbRef = firebase.database().ref();
 var database = firebase.database();
 
 let t = setInterval(fetch, 20000);
+let url = window.location.href;
+let code = url.split("/Webship/index.html?id=");
+console.log(code[1]);
 
 function fetch() {
-dbRef.child("data/ref/avi").once('value').then((snapshot) => {
+  document.getElementById("device").innerHTML = `Posting`;
+dbRef.child("data/ref/" + code).once('value').then((snapshot) => {
   if (snapshot.exists()) {
     var res = snapshot.val();
-console.log(res.timestamp);
+
 document.getElementById("clipboard").value = res.data;
 var dateFormat= new Date(res.timestamp);
-document.getElementById("device").innerHTML = `Posted from ${res.platform} on ${dateFormat}`;
+document.getElementById("device").innerHTML = `Posted on ${dateFormat}`;
 document.getElementById("status").innerHTML = "Fetched";
 }
 });
@@ -25,7 +29,7 @@ function post() {
   } else {
   platform="Windows (PC)";
   }
-    firebase.database().ref('data/ref/avi').set({
+    firebase.database().ref('data/ref/' + code).set({
         data: document.getElementById('clipboard').value,
         platform: platform,
         timestamp: Math.floor(Date.now())
@@ -35,7 +39,9 @@ function post() {
 }
 
 function qrGen() {
-    document.getElementById("qr").src = "https://chart.googleapis.com/chart?cht=qr&chl=xqr&chs=160x160&chld=L|0";
+  let qrCode= Math.floor(Date.now());
+    document.getElementById("qr").src = `https://chart.googleapis.com/chart?cht=qr&chl=https://avi-rana-1718.github.io/Webship/index.html?id=${qrCode}&chs=160x160&chld=L|0`;
+    window.location.href=window.location.href + "?id=" + qrCode;
 }
 
 

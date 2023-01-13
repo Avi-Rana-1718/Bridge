@@ -15,10 +15,12 @@
     <nav onload="fetch()">
         <h3>WebShip</h3>
     </nav>
+    <button onclick="qrGen()">QR</button>
+    <img id="qr" src="#">
     <div id="main">
    
       <div>
-        <small id="status"></small>
+        <small id="status">Fetching</small>
       </div>
             <textarea rows="4" id="clipboard" onchange="post()">
             </textarea>
@@ -26,6 +28,10 @@
       <small id="device"></small>
     </div>
     </div>
+
+<footer>
+  @AviRana
+</footer>
 
     <!--SRC-->
  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
