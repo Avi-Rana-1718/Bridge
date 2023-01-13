@@ -1,0 +1,34 @@
+body {
+    padding: 10px;
+}
+#cliparea {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+}
+#cliparea div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    border: 2px solid #888;
+    border-radius: 3px;
+}
+#cliparea textarea {
+    border: none;
+    resize: none;
+    padding: 4px;
+    border-radius: 3px;
+    width: 70vw;
+}
+#cliparea textarea:focus {
+    outline: none;
+}
+#cliparea i {
+    padding: 3px;
+    font-size: xx-large;
+    margin: 7px;
+}
+#cliparea i:hover {
+    background-color: #f3f3f3;
+}
