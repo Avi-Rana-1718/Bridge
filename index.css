@@ -32,3 +32,7 @@ body {
 #cliparea i:hover {
     background-color: #f3f3f3;
 }
+#device {
+    display: block;
+    text-align: center;
+}
