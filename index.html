@@ -15,16 +15,17 @@
     <nav onload="fetch()">
         <h3>WebShip</h3>
     </nav>
+    <div id="main">
    
-    <div id="cliparea">
-        <div>
-            <textarea rows="4" id="clipboard">
+      <div>
+        <small id="status"></small>
+      </div>
+            <textarea rows="4" id="clipboard" onchange="post()">
             </textarea>
-            <i class="fas fa-paper-plane" onclick="post()"></i>
-        </div>
+    <div>
+      <small id="device"></small>
     </div>
-    <small id="device"></small>
-    
+    </div>
 
     <!--SRC-->
  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->

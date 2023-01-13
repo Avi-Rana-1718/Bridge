@@ -7,9 +7,11 @@ function fetch() {
 dbRef.child("data/ref/avi").once('value').then((snapshot) => {
   if (snapshot.exists()) {
     var res = snapshot.val();
-console.log(res.data);
+console.log(res.timestamp);
 document.getElementById("clipboard").value = res.data;
-document.getElementById("device").innerHTML = `Posted from ${res.platform} `;
+var dateFormat= new Date(res.timestamp);
+document.getElementById("device").innerHTML = `Posted from ${res.platform} on ${dateFormat}`;
+document.getElementById("status").innerHTML = "Fetched";
 }
 });
 }
@@ -25,10 +27,11 @@ function post() {
   }
     firebase.database().ref('data/ref/avi').set({
         data: document.getElementById('clipboard').value,
-        platform: platform
+        platform: platform,
+        timestamp: Math.floor(Date.now())
       });
+      document.getElementById("status").innerHTML = "Posted";
       console.log("posted");
-      fetch();
 }
 
 function qrGen() {
