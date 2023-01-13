@@ -11,7 +11,7 @@ document.getElementById("qr").src = "https://chart.googleapis.com/chart?cht=qr&c
 
 function fetch() {
   document.getElementById("device").innerHTML = `Posting`;
-dbRef.child("data/ref/" + code).once('value').then((snapshot) => {
+dbRef.child("data/ref/" + code[1]).once('value').then((snapshot) => {
   if (snapshot.exists()) {
     var res = snapshot.val();
 
@@ -32,7 +32,7 @@ function post() {
   } else {
   platform="Windows (PC)";
   }
-    firebase.database().ref('data/ref/' + code).set({
+    firebase.database().ref('data/ref/' + code[1]).set({
         data: document.getElementById('clipboard').value,
         platform: platform,
         timestamp: Math.floor(Date.now())
