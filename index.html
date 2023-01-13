@@ -11,17 +11,18 @@
         <script src="https://kit.fontawesome.com/3a3c813962.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="index.css">
 </head>
-<body onload="qrGen()">
+<body>
     <nav onload="fetch()">
         <h3>WebShip</h3>
     </nav>
-    <img id="qr">
+   
     <div id="cliparea">
         <div>
             <textarea rows="4" id="clipboard">
             </textarea>
-            <i class="fas fa-clipboard" onclick="post()"></i>
+            <i class="fas fa-paper-plane" onclick="post()"></i>
         </div>
+        <small id="device"></small>
     </div>
     
 
