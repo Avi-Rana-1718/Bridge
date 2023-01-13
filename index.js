@@ -43,7 +43,7 @@ function post() {
 
 function qrGen() {
   let qrStamp= Math.floor(Date.now());
-    window.location.href=window.location.href + "?id=" + qrStamp;
+    window.location.href=window.location.href + "index.html?id=" + qrStamp;
 }
 
 
