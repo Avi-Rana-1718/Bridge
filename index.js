@@ -6,6 +6,9 @@ let url = window.location.href;
 let code = url.split("/Webship/index.html?id=");
 console.log(code[1]);
 
+document.getElementById("qr").src = "https://chart.googleapis.com/chart?cht=qr&chl=https://avi-rana-1718.github.io/Webship/index.html?id=" + code[1] + "&chs=160x160&chld=L|0";
+
+
 function fetch() {
   document.getElementById("device").innerHTML = `Posting`;
 dbRef.child("data/ref/" + code).once('value').then((snapshot) => {
@@ -39,9 +42,8 @@ function post() {
 }
 
 function qrGen() {
-  let qrCode= Math.floor(Date.now());
-    document.getElementById("qr").src = `https://chart.googleapis.com/chart?cht=qr&chl=https://avi-rana-1718.github.io/Webship/index.html?id=${qrCode}&chs=160x160&chld=L|0`;
-    window.location.href=window.location.href + "?id=" + qrCode;
+  let qrStamp= Math.floor(Date.now());
+    window.location.href=window.location.href + "?id=" + qrStamp;
 }
 
 
