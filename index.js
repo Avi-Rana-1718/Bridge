@@ -10,7 +10,7 @@ document.getElementById("qr").src = "https://chart.googleapis.com/chart?cht=qr&c
 
 
 function fetch() {
-  document.getElementById("device").innerHTML = `Posting`;
+  document.getElementById("status").innerHTML = `Posting`;
 dbRef.child("data/ref/" + code[1]).once('value').then((snapshot) => {
   if (snapshot.exists()) {
     var res = snapshot.val();
