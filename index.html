@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Webship</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -15,18 +15,15 @@
     <nav onload="fetch()">
         <h3>WebShip</h3>
     </nav>
-    <button onclick="qrGen()">QR</button>
-    <img id="qr" src="#">
     <div id="main">
-   
-      <div>
         <small id="status">Fetching</small>
-      </div>
-            <textarea rows="4" id="clipboard" onchange="post()">
-            </textarea>
-    <div>
+            <textarea rows="4" id="clipboard" onchange="post()"></textarea>
       <small id="device"></small>
-    </div>
+      <div id="qrDiv">
+        <span id="qrSpan"></span>
+        <button id="qrBtn" onclick="qrGen()">QR</button><br>
+        <img id="qr" src="#">
+      </div>
     </div>
 
 <footer>

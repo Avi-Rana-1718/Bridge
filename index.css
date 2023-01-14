@@ -2,6 +2,9 @@ body {
     padding: 10px;
     
 }
+i {
+    margin: 5px;
+}
 #main {
     display: flex;
     flex-direction: column;
@@ -14,6 +17,7 @@ body {
 #clipboard {
     border: none;
     resize: none;
+    margin: 4px;
     padding: 4px;
     display: block;
     border-radius: 3px;
@@ -34,5 +38,14 @@ body {
 }
 #status, #device {
     display: block;
+    width: 50vw;
     
+}
+#qrDiv {
+    margin-top: 10px;
+}
+@media screen and (max-width:800px) {
+    #clipboard, #device, #status, #main div {
+        width:90vw;
+    }
 }
