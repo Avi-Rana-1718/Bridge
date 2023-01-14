@@ -22,19 +22,21 @@ i {
     display: block;
     border-radius: 3px;
     width: 50vw;
-    border: 2px solid #888;
+    border: 2px solid #dadada;
     border-radius: 3px;
 }
-#cliparea textarea:focus {
+
+#clipboard:focus {
     outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
-#cliparea i {
-    padding: 3px;
-    font-size: x-large;
-    margin: 7px;
+#topBar {
+    display: flex;
+    justify-content: space-between;
 }
-#cliparea i:hover {
-    background-color: #f3f3f3;
+#topBar span {
+    white-space: nowrap;
 }
 #status, #device {
     display: block;

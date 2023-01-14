@@ -13,17 +13,26 @@
 </head>
 <body>
     <nav onload="fetch()">
-        <h3>WebShip</h3>
+        <h3><i class="fas fa-cloud"></i> WebShip</h3>
     </nav>
     <div id="main">
-        <small id="status">Fetching</small>
+
+        <div id="topBar">
+          <small id="status">Fetching</small>
+          <span>
+            <i class="fas fa-sync-alt" onclick="fetch()"></i>
+            <i class="fas fa-copy"></i>
+          </span>
+        </div>
             <textarea rows="4" id="clipboard" onchange="post()"></textarea>
       <small id="device"></small>
+
       <div id="qrDiv">
         <span id="qrSpan"></span>
         <button id="qrBtn" onclick="qrGen()">QR</button><br>
         <img id="qr" src="#">
       </div>
+
     </div>
 
 <footer>

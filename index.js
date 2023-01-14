@@ -40,7 +40,7 @@ function post() {
         platform: platform,
         timestamp: Math.floor(Date.now())
       });
-      document.getElementById("status").innerHTML = "Posted";
+      document.getElementById("status").innerHTML = "<i class='fas fa-cloud'></i>Posted";
       console.log("posted");
 }
 
