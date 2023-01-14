@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
 
 body {
-    padding: 10px;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #FFF;
 }
 i {
     cursor: pointer;
@@ -15,15 +17,21 @@ p, textarea {
 }
 nav h3 {
     text-decoration: underline;
-    text-decoration-color: #9ecaed;
+    text-decoration-color: #45D810;
+    font-family: 'Sora', sans-serif;
 }
 #main {
     display: grid;
-    grid-template-columns: 35% 65%;
+    padding: 0;
+    grid-template-columns: 40% 60%;
 }
 #main div {
-    margin-top: 20px;
     padding: 10px;
+    margin: 0;
+    height: 100vh;
+}
+#cliparea {
+    /* border-left: 3px solid #000; */
 }
 #clipboard {
     border: none;
@@ -45,6 +53,8 @@ div#topBar {
     padding:0;
     margin: 0;
     display: flex;
+    background-color: none;
+    height: auto;
     justify-content: space-between;
 }
 #topBar span {
@@ -63,15 +73,27 @@ div#topBar {
     padding: 5px 7px;
     margin-top: 7px;
     border-radius: 4px;
+    background-color: #45D810;
+    color: #f8f8f8;
+    font-family: 'Sora', sans-serif;
 }
 #qrDiv {
+    background-color: #F8F8F8;
     margin-top: 10px;
+    text-align: center;
 }
+
 #qr {
     display: none;
+    padding: 10px;
+    background-color: #45D810;
+    border-radius: 4px;
+    margin: 0 auto;
 }
 footer {
     margin: 40px;
+    position: absolute;
+    bottom: 0;
     color: #888;
     display: flex;
 }
@@ -89,6 +111,16 @@ footer a {
 @media screen and (max-width:800px) {
     #main {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    #main div {
+        height: auto;
+        text-align: left;
+    }
+    #qrDiv {
+        background-color: #fff;
+    }
+    footer {
+        display: none;
     }
 }

@@ -6,7 +6,7 @@ let url = window.location.href;
 let code = url.split("/Webship/index.html?id=");
 console.log(code[1]);
 if(code[1]!=undefined) {
-  document.getElementById("qrSpan").innerHTML = `Code successfully generated, any device with the same code came share data. (ID: ${code[1]}). Scan this QR code from another device.`;
+  document.getElementById("qrSpan").innerHTML = `Code successfully generated, any device with the same code can share data. (ID: ${code[1]}). Scan this QR code from another device.`;
   document.getElementById("qrBtn").style.display =  "none";
   document.getElementById("qr").style.display = "block";
 document.getElementById("qr").src = "https://chart.googleapis.com/chart?cht=qr&chl=https://avi-rana-1718.github.io/Webship/index.html?id=" + code[1] + "&chs=160x160&chld=L|0";

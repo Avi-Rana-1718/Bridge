@@ -12,19 +12,19 @@
         <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <nav onload="fetch()">
-        <h3><i class="fas fa-cloud"></i>WebShip</h3>
-    </nav>
     <div id="main">
       
       <div id="qrDiv">
+        <nav onload="fetch()">
+          <h3>Webship</h3>
+      </nav>
         <br>
         <p id="qrSpan">Generate QR code and scan on it from another device (one or more) and access shared data from any device.</p>
         <button id="qrBtn" onclick="qrGen()">Generate</button><br>
         <img id="qr" src="#">
       </div>
 
-      <div>
+      <div id="cliparea">
         <div id="topBar">
           <small id="status">Fetching</small>
           <span>
@@ -34,20 +34,19 @@
         </div>
             <textarea rows="4" id="clipboard" onchange="post()"></textarea>
       <small id="device"></small>
+      
+      <footer>
+        @AviRana
+        <ul>
+            <li><a title="Github" href="https://github.com/Avi-Rana-1718"><i class="fab fa-github"></i></a></li>
+            <li><a title="Buymeacoffee" href="https://avirana.com/coffee"><i class="fas fa-coffee"></i></a></li>
+            <li><a title ="Twitter" href="https://www.twitter.com/_AviRana"><i class="fab fa-twitter"></i></a></li>
+            <li><a title="Discord" href="https://discord.com/users/738331369616441427"><i class="fab fa-discord"></i></a></li>
+            <li><a title="Linkedin" href="https://www.linkedin.com/in/avi-rana/"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </footer>
       </div>
-
     </div>
-
-    <footer>
-      @AviRana
-      <ul>
-          <li><a title="Github" href="https://github.com/Avi-Rana-1718"><i class="fab fa-github"></i></a></li>
-          <li><a title="Buymeacoffee" href="https://avirana.com/coffee"><i class="fas fa-coffee"></i></a></li>
-          <li><a title ="Twitter" href="https://www.twitter.com/_AviRana"><i class="fab fa-twitter"></i></a></li>
-          <li><a title="Discord" href="https://discord.com/users/738331369616441427"><i class="fab fa-discord"></i></a></li>
-          <li><a title="Linkedin" href="https://www.linkedin.com/in/avi-rana/"><i class="fab fa-linkedin"></i></a></li>
-      </ul>
-  </footer>
 
     <!--SRC-->
  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
