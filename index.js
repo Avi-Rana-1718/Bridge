@@ -1,12 +1,13 @@
 const dbRef = firebase.database().ref();
+var storageRef = firebase.storage().ref();
 var database = firebase.database();
 
 let t = setInterval(fetch, 20000);
 let url = window.location.href;
-let code = url.split("/Webship/index.html?id=");
+let code = url.split("index.html?id=");
 console.log(code[1]);
 if(code[1]!=undefined) {
-  document.getElementById("qrSpan").innerHTML = `Code successfully generated, any device with the same code can share data. (ID: ${code[1]}). Scan this QR code from another device.`;
+  document.getElementById("qrSpan").innerHTML = `Code successfully generated, any device with the same code can share data. (ID: ${code[1]}).`;
   document.getElementById("qrBtn").style.display =  "none";
   document.getElementById("qr").style.display = "block";
 document.getElementById("qr").src = "https://chart.googleapis.com/chart?cht=qr&chl=https://avi-rana-1718.github.io/Webship/index.html?id=" + code[1] + "&chs=160x160&chld=L|0";
@@ -20,7 +21,7 @@ dbRef.child("data/ref/" + code[1]).once('value').then((snapshot) => {
 
 document.getElementById("clipboard").value = res.data;
 var dateFormat= new Date(res.timestamp);
-document.getElementById("device").innerHTML = `Posted on ${dateFormat}`;
+document.getElementById("device").innerHTML = `Posted on ${dateFormat} by ${res.platform}`;
 document.getElementById("status").innerHTML = `<i class="fas fa-check-circle"></i>Fetched`;
 }
 });
@@ -29,9 +30,9 @@ document.getElementById("status").innerHTML = `<i class="fas fa-check-circle"></
 let platform;
 function post() {
   document.getElementById("status").innerHTML = `Posting`;
-  if (navigator.userAgent.match(/Android/i)==true) {
+  if (navigator.userAgent.match(/Android/i)) {
   platform="Android";
-  } else if (navigator.userAgent.match(/iPhone/i)==true) {
+  } else if (navigator.userAgent.match(/iPhone/i)) {
     platform="iPhone";
   } else {
   platform="Windows (PC)";
@@ -49,5 +50,3 @@ function qrGen() {
   let qrStamp= Math.floor(Date.now());
     window.location.href=window.location.href + "index.html?id=" + qrStamp;
 }
-
-
