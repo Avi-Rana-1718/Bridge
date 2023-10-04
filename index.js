@@ -11,7 +11,6 @@ if(code[1]!=undefined) {
   document.getElementById("qrBtn").style.display =  "none";
   document.getElementById("qr").style.display = "block";
 document.getElementById("qr").src = "https://chart.googleapis.com/chart?cht=qr&chl=https://bridge.avirana.com/index.html?id=" + code[1] + "&chs=160x160&chld=L|0";
-
 }
 function fetch() {
   document.getElementById("status").innerHTML = `Fetching`;
