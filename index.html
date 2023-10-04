@@ -9,42 +9,25 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="https://kit.fontawesome.com/3a3c813962.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+  <nav>Bridge</nav>
     <div id="main">
-      
-      <div id="qrDiv">
-        <nav onload="fetch()">
-          <h3>Bridge</h3>
-      </nav>
-        <br>
-        <p id="qrSpan">Generate a QR code and scan on it from another device (one or more) and access shared data from any device.</p>
-        <button id="qrBtn" onclick="qrGen()">Generate</button><br>
-        <img id="qr" src="#">
-      </div>
-
-      <div id="cliparea">
-        <div id="topBar">
-          <small id="status">Fetching</small>
-          <span>
-            <i class="fas fa-sync-alt" onclick="fetch()"></i>
-          </span>
-        </div>
-            <textarea rows="4" id="clipboard" onchange="post()"></textarea>
-      <small id="device"></small>
-      
-      <footer>
-        @AviRana
-        <ul>
-            <li><a title="Github" href="https://github.com/Avi-Rana-1718"><i class="fab fa-github"></i></a></li>
-            <li><a title="Buymeacoffee" href="https://avirana.com/coffee"><i class="fas fa-coffee"></i></a></li>
-            <li><a title ="Twitter" href="https://www.twitter.com/_AviRana"><i class="fab fa-twitter"></i></a></li>
-            <li><a title="Discord" href="https://discord.com/users/738331369616441427"><i class="fab fa-discord"></i></a></li>
-            <li><a title="Linkedin" href="https://www.linkedin.com/in/avi-rana/"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
-    </footer>
-      </div>
+<aside>
+</aside>
+<section>
+  <div>
+    Temparary session opened with ID: <span id="chatID"></span>.
+  </div>
+  <ul>
+    
+  </ul>
+  <form>
+    <input type="text" id="input">
+    <input type="button" onclick="post()">
+  </form>
+</section>
     </div>
 
     <!--SRC-->

@@ -6,126 +6,25 @@
 
 body {
         padding: 0;
-        background-color: #FFF;
         font-family: 'Oxygen', sans-serif;
+        color: #fff;
+        background-color: #161719;
 }
 i {
     cursor: pointer;
     margin: 5px;
 }
-p, textarea {
-    margin: 0;
-}
-nav h3 {
-    font-family: 'Manrope', sans-serif;
+nav {
+    padding: 10px;
 }
 #main {
-    display: grid;
-    padding: 0;
-    grid-template-columns: 40% 60%;
+    display: flex;
 }
-#main div {
+#main aside {
     padding: 10px;
-    margin: 0;
-    height: 100vh;
 }
-#cliparea {
-    /* border-left: 3px solid #000; */
-}
-#clipboard {
-    border: none;
-    margin: 4px;
-    padding: 4px;
-    display: block;
-    border-radius: 3px;
-    width: 100%;
-    border: 2px solid #dadada;
-    border-radius: 3px;
-}
-
-#clipboard:focus {
-    outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
-}
-div#topBar {
-    padding:0;
-    margin: 0;
-    display: flex;
-    background-color: none;
-    height: auto;
-    justify-content: space-between;
-}
-#topBar span {
-    white-space: nowrap;
-}
-#status, #device {
-    display: block;
-    width: 50vw;
-    
-}
-#device {
-    margin: 5px;
-}
-#qrBtn {
-    border: none;
-    padding: 9px 14px;
-    margin: 7px;
-    border-radius: 48px;
-    text-align: center;
-    background-color: #0C58D0;
-    color: #f8f8f8;
-    font-family: 'Manrope', sans-serif;
-}
-#qrBtn:hover {
-    border-radius: 35px;
-}
-#qrDiv {
-    background-color: #F8F8F8;
-    margin-top: 10px;
-    font-family: 'Work Sans', sans-serif;
-    /* text-align: center; */
-}
-
-#qr {
-    display: none;
-    padding: 10px;
-    background-color: #0C58D0;
-    border-radius: 4px;
-    margin: 0 auto;
-}
-footer {
-    margin: 40px;
-    position: absolute;
-    bottom: 0;
-    color: #888;
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-}
-footer ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-}
-footer a {
-    color: #888;
-    margin: 2px;
-}
-
-
-@media screen and (max-width:800px) {
-    #main {
-        display: flex;
-        flex-direction: column;
-    }
-    #main div {
-        height: auto;
-        text-align: left;
-    }
-    #qrDiv {
-        background-color: #fff;
-    }
-    footer {
-        display: none;
-    }
+#main section {
+display: block;
+padding: 10px;
+width: 100%;
 }
